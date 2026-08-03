@@ -1,14 +1,107 @@
-const body = document.querySelector('body');
+const userCode = "Admin";
+const password = "Admin@1234";
+
+const userCodeInput = document.querySelector("#user-code");
+const passwordInput = document.querySelector("#password");
+const formStatus = document.querySelector("#form-status");
+
+let isPassVisible = false;
+
+document.querySelector("#show-pass-icon").addEventListener("click", (event) => {
+  if (isPassVisible == false) {
+    passwordInput.setAttribute("type", "text");
+    event.target.classList.toggle("bi-eye-slash-fill");
+    isPassVisible = true;
+  } else {
+    passwordInput.setAttribute("type", "password");
+    event.target.classList.remove("bi", "bi-eye-slash-fill");
+    isPassVisible = false;
+  }
+});
+
+document.querySelector("#login-btn").addEventListener("click", loginUser);
+
+passwordInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    loginUser();
+  }
+});
+
+function loginUser() {
+  let isValidInput = false;
+  let userCredential = ["", ""];
+  for (let i = 0; i < 2; i++) {
+    let userInput = document.querySelectorAll("input")[i];
+    userCredential[i] = userInput.value.trim();
+
+    if (userCredential[i] == "") {
+      userInput.parentElement.classList.add("error");
+      formStatus.style.setProperty("--child-color", "#f00");
+      formStatus.children[1].textContent =
+        "Required field cannot be left blank!";
+      isValidInput = false;
+    } else {
+      userInput.parentElement.classList.remove("error");
+      formStatus.style.setProperty("--child-color", "#bebebe");
+      formStatus.children[1].textContent = "* denotes a required field!";
+      isValidInput = true;
+    }
+    userCodeInput.focus();
+  }
+
+  if (isValidInput == true) {
+    if (userCredential[0] != userCode && userCredential[1] != password) {
+      userCodeInput.parentElement.classList.add("error");
+      userCodeInput.value = "";
+      userCodeInput.focus();
+      passwordInput.parentElement.classList.add("error");
+      passwordInput.value = "";
+      formStatus.style.setProperty("--child-color", "#f00");
+      formStatus.children[1].textContent = "Invalid user credentials!";
+    } else {
+      alert("Welcome!");
+      userCodeInput.value = "";
+      passwordInput.value = "";
+    }
+  }
+}
+
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  manipulateErrorUI();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "F12") {
+    event.preventDefault();
+    manipulateErrorUI();
+
+    return false;
+  }
+
+  if (
+    event.ctrlKey &&
+    event.shiftKey &&
+    ["I", "J", "C"].includes(event.key.toUpperCase())
+  ) {
+    event.preventDefault();
+    manipulateErrorUI();
+    return false;
+  }
+
+  if (event.ctrlKey && event.key.toUpperCase() === "U") {
+    event.preventDefault();
+    manipulateErrorUI();
+    return false;
+  }
+});
+
+function manipulateErrorUI() {
+  formStatus.style.setProperty("--child-color", "#f00");
+  formStatus.children[1].textContent = "Invalid user credentials!";
+  userCodeInput.focus();
+}
 
 setInterval(() => {
-  let fontRed = Math.round(Math.random()*255);
-  let fontGreen = Math.round(Math.random()*255);
-  let fontBlue = Math.round(Math.random()*255);
-  
-
-  let backRed = Math.round(Math.random()*255);
-  let backGreen = Math.round(Math.random()*255);
-  let backBlue = Math.round(Math.random()*255);
-
-  body.style = `color: rgb(${fontRed}, ${fontGreen}, ${fontBlue})`;
-}, 1000);
+  debugger;
+}, 100);

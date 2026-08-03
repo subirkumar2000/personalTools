@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learning Git & GitHub</title>
+  <title>login</title>
 
-  <link rel="stylesheet" href="style.css">  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/icon/no-entry-sign.png" type="image/x-icon">
+
+  <!-- Bootstrap Font Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Now, I am learning Git and GitHub....</h1>
+  <div class="form-body">
+    <figure>
+      <img src="images/icon/red-stop-sign.png" alt="red stop sign">
+      <figcaption>Personal Tools</figcaption>
+    </figure>
+
+    <form autocomplete="off">
+      <div>
+        <label for="user-code">USER CODE <span class="required-mark">*</span></label>
+        <div class="input-div">
+          <i class="bi bi-person-fill"></i>
+          <input type="text" name="userCode" id="user-code" placeholder="Enter User Code" autofocus>
+        </div>
+      </div>
+
+      <div>
+        <label for="password">PASSWORD <span class="required-mark">*</span></label>
+        <div  class="input-div">
+          <i class="bi bi-shield-lock-fill"></i>
+          <input type="password" name="password" id="password" placeholder="Enter Password" >
+          <i class="bi bi-eye-fill" id="show-pass-icon"></i>
+        </div>
+      </div>
+
+      <div id="form-status">
+        <i class="bi bi-exclamation-circle-fill"></i>
+        <p>* denotes a required field!</p>
+      </div>
+
+      <button type="button" id="login-btn"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+    </form>
+  </div>
+
   <script src="main.js"></script>
 </body>
+
 </html>
