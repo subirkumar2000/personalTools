@@ -49,6 +49,7 @@ function loginUser() {
     userCodeInput.focus();
   }
 
+  
   if (isValidInput == true) {
     if (userCredential[0] != userCode && userCredential[1] != password) {
       userCodeInput.parentElement.classList.add("error");
