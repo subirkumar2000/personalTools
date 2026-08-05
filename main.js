@@ -1,5 +1,5 @@
-const userCode = "Admin";
-const password = "Admin@1234";
+const userCode = "a";
+const password = "1";
 
 const userCodeInput = document.querySelector("#user-code");
 const passwordInput = document.querySelector("#password");
@@ -60,9 +60,9 @@ function loginUser() {
       formStatus.style.setProperty("--child-color", "#f00");
       formStatus.children[1].textContent = "Invalid user credentials!";
     } else {
-      alert("Welcome!");
       userCodeInput.value = "";
       passwordInput.value = "";
+      window.location.href = '/catalogue.html'
     }
   }
 }
