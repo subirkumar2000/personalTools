@@ -11,8 +11,9 @@ li{
 
 #field-btn{
   font-size: 1.1rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 10px;
   flex-flow: row wrap;
@@ -20,6 +21,11 @@ li{
   top: 0;
   background-color: #D0D0D0;
   padding: 10px;
+}
+
+.js-fill {
+  background-color: green;
+  color: #fff;
 }
 
 #field-btn li{
@@ -52,7 +58,7 @@ li{
 }
 
 #function-btn button:hover{
-  background-color: gray;
+  background-color: #808080;
   color: #fff;
   box-shadow: 1px 1px 3px gray;
 }
@@ -76,6 +82,7 @@ form > div:nth-child(1){
 }
 
 textarea{
+  padding: 5px;
   width: 95%;
   height: 200px;
 }

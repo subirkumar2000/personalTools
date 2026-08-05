@@ -33,6 +33,21 @@ for (let i = 0; i < 4; i++) {
   });
 }
 
-document.querySelector('#copy-pompt').addEventListener('click', () => {
+document.querySelector('#copy-prompt').addEventListener('click', () => {
   navigator.clipboard.writeText(prompt.value);
 });
+
+for(let i=0; i<5; i++){
+  document.querySelectorAll('textarea')[i].addEventListener('input', ()=> {
+    for (let j = 0; j < 4; j++) {
+      let textareaField = document.querySelectorAll('form textarea')[j];
+      let fieldBtn = document.querySelectorAll('#field-btn li')[j];
+
+      if(textareaField.value != ''){
+        fieldBtn.classList.add('js-fill');
+      } else if (fieldBtn.classList.contains('js-fill')){
+        fieldBtn.classList.remove('js-fill');
+      }
+    }
+  })
+}
