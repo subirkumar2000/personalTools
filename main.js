@@ -72,7 +72,7 @@ function loginUser() {
   isValidCredential = false;
   userCodeInput.value = "";
   passwordInput.value = "";
-  window.location.href = "/catalogue.html";
+  window.location.href = "catalogue.html";
 }
 
 let ua = navigator.userAgent;
