@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   user-select: none;
 }
 
@@ -10,30 +10,35 @@ body {
   padding: 20px 10px;
 }
 
+li {
+  list-style-type: none;
+}
+
 h1 {
-  font-size: 10vw;
+  font-size: 4vw;
   text-align: center;
   font-weight: bolder;
-  text-decoration: .4vw underline dashed;
+  text-decoration: 0.4vw underline dashed;
   text-underline-offset: 1vw;
 }
 
 #catalogue {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
   margin-top: 20px;
 }
 
-figure {
+#catalogue li {
   border: 1px solid black;
   background-color: #fff;
   border-radius: 10px;
+  padding: 5px;
   position: relative;
   overflow: hidden;
 }
 
-figure img{
+figure img {
   width: 100%;
 }
 
@@ -46,12 +51,23 @@ figcaption {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #FFFFFF8C;
+  background-color: #ffffff8c;
   color: #000000;
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: bold;
-  text-shadow: 1px 1px 3px #5C5C5C;
+  text-shadow: 1px 1px 3px #5c5c5c;
   transition: top 1s ease-in-out;
+  padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  figcaption {
+    font-size: 10vw;
+  }
 }
 
 figure:hover figcaption {
