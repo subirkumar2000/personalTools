@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Promte Generetor</title>
+  
+  <link rel="stylesheet" href="board.css">
+</head>
+<body>
+  <nav>
+    <ul id="field-btn">
+      <li data-id="js-problem-field" >JS Problem</li>
+      <li data-id="html-code-field">HTML Code</li>
+      <li data-id="css-code-field">CSS Code</li>
+      <li data-id="js-code-field">Javascript Code</li>
+    </ul>
+  </nav>
+  <form >
+    <div id="js-problem-field">
+      <label for="js-problem">--- Enter The JS Problem ---</label>
+      <textarea name="" id="js-problem" cols="30" rows="10" placeholder="Write the JavaScript problem here ..."></textarea>
+    </div>
+    
+    <div id="html-code-field">
+      <label for="html-code">--- Enter HTML Code ---</label>
+      <textarea name="" id="html-code" cols="30" rows="10" placeholder="Write the HTML code here ..."></textarea>
+    </div>
+    
+    <div id="css-code-field">
+      <label for="css-code">--- Enter CSS Code ---</label>
+      <textarea name="" id="css-code" cols="30" rows="10" placeholder="Write the CSS code here ..."></textarea>
+    </div>
+    
+    <div id="js-code-field">
+      <label for="js-code">--- Enter JavaScript Code --- </label>
+      <textarea name="" id="js-code" cols="30" rows="10" placeholder="Write the JavaScript code here ..."></textarea>
+    </div>
+  </form>
+  <div id="function-btn">
+    <button type="button" id="generate-btn">Generate Prompt</button>
+    <button type="button" id="copy-pompt">Copy Prompt</button>
+  </div>
+  <div class="prompt-field">
+    <textarea name="" id="prompt" cols="30" rows="10"></textarea>
+  </div>
+  
+  <script src="board.js"></script>
+</body>
+</html>
