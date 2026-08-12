@@ -8,7 +8,7 @@
 }
 
 body{
-  background-image: url("./images/galaxy.jpg");
+  background-image: url("./assets/galaxy.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
