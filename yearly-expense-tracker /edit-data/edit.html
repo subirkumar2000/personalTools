@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Data</title>
+
+  <link rel="shortcut icon" href="../assets/yearly-expenses-icon.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+  <div id="nav-btn">
+    <a href="../welcome.html"><i class="bi bi-house-door-fill"></i></a>
+
+    <div id="month-btn">
+      <i class="bi bi-pencil-fill"></i>
+    </div>
+    <div class="month-select">
+      <div class="year-section">
+        <span id="current-year">2026</span>
+      </div>
+      <ul id="month-name">
+        <li data-id="1" data-value="January">Jan</li>
+        <li data-id="2" data-value="February">Feb</li>
+        <li data-id="3" data-value="March">Mar</li>
+        <li data-id="4" data-value="April">Apr</li>
+        <li data-id="5" data-value="May">May</li>
+        <li data-id="6" data-value="June">Jun</li>
+        <li data-id="7" data-value="July">Jul</li>
+        <li data-id="8" data-value="August">Aug</li>
+        <li data-id="9" data-value="September">Sep</li>
+        <li data-id="10" data-value="October">Oct</li>
+        <li data-id="11" data-value="November">Nov</li>
+        <li data-id="12" data-value="December">Dec</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="month-field">
+    
+  </div>
+
+  <hr>
+
+  <div id="fix-expanse">
+    <div class="heading">
+      <h3>Fix Expense Per Month</h3>
+      <div class="heading-btn">
+        <button type="button" class="add">
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <button type="button" class="minimize">
+          <i class="bi bi-chevron-down"></i>  
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div class="input-field">
+
+      <div class="input" id="default-field">
+        <input type="text" class="expense-type" placeholder="Enter expanse type expanse">
+        <input type="number" class="amount" placeholder="Amount (₹0000.00)">
+        <button type="button" class="remove-input">
+          <i class="bi bi-trash3-fill"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="fix-income">
+    <div class="heading">
+      <h3>Fix Income per Month</h3>
+      <div class="heading-btn">
+        <button type="button" class="minimize">
+          <i class="bi bi-chevron-down"></i>  
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div class="input-field">
+
+      <div class="input">
+        <input type="text" class="expense-type income-source" placeholder="Enter income source">
+        <input type="number" class="amount" placeholder="Amount (₹0000.00)">
+      </div>
+
+    </div>
+  </div>
+
+  <button type="button" id="save-data">Save Data</button>
+
+
+  <script src="edit.js"></script>
+</body>
+
+</html>
