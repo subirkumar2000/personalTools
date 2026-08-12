@@ -49,7 +49,7 @@ if (monthNameArr == null) {
               </button>
         </div>
       </div>
-      <hr />
+      
       <div class="input-field">
       </div>
     </div>
